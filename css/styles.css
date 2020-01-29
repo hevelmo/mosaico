@@ -17,6 +17,7 @@ img {
       overflow: hidden;
       break-inside: avoid;
       border: 2px solid #81bb27;
+      position: relative;
 }
 .mosaic-gallery .mosaic-gallery-item:nth-child(1) {
       border-right: 1px solid #81bb27;
@@ -45,33 +46,30 @@ img {
 .mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-img {
       -webkit-transform: scale(1.06);
       transform: scale(1.06);
+      -webkit-filter: blur(1.5px);
+      filter: blur(1.5px);
 }
 .mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-img,
 .mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-img {
       -webkit-transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-hover {
-      visibility: hidden;
-      opacity: 0;
-      background: rgba(24,27,30,0);
+.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-hover,
+.mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-hover {
+      background: rgba(129, 187, 39, 0.38);
       text-align: center;
       -webkit-transition: ease-out 0.3s;
       transition: ease-out 0.3s;
+      position: absolute;
+      width: 292px;
+      height: 198.8px;
+      margin: auto;
+}
+.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-hover {
+      visibility: hidden;
+      opacity: 0;
 }
 .mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-hover {
       visibility: visible;
       opacity: 1;
-      background: rgba(24,27,30,0.3);
-      text-align: center;
-      -webkit-transition: ease-out 0.3s;
-      transition: ease-out 0.3s;
-      position: relative;
-      top: 0;
-      /* left: 0; */
-      /* right: 0; */
-      /* bottom: 0; */
-      width: 292px;
-      height: 198.8px;
-      margin: auto;
 }
