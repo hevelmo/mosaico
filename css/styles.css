@@ -7,42 +7,50 @@ img {
   display: block; }
 
 .mosaic-gallery {
-      width: 1200px;
-      margin: 20px auto;
+      width: 1170px;
+      margin: 0px auto;
       columns: 4;
       column-gap: 0px;
-      /*
-        --columns: 4;
-        --gap: 0rem;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: (1fr)[var(--columns)];
-        grid-template-columns: repeat(var(--columns), 1fr);
-        grid-gap: var(--gap);
-        max-width: 100%;
-        margin: 0 auto;
-        */
 }
 .mosaic-gallery .mosaic-gallery-item {
-      width: 100%;
+      padding: 0px;
+      overflow: hidden;
+      break-inside: avoid;
       border: 2px solid #81bb27;
 }
-/*.mosaic-gallery.columns-1 {
-    --columns: 1; }
-.mosaic-gallery.columns-2 {
-    --columns: 2; }
-.mosaic-gallery.columns-3 {
-    --columns: 3; }
-.mosaic-gallery.columns-4 {
-    --columns: 4; }
-.mosaic-gallery.columns-5 {
-    --columns: 5; }
-.mosaic-gallery.columns-6 {
-    --columns: 6; }
-    */
-
+.mosaic-gallery .mosaic-gallery-item:nth-child(1) {
+      border-right: 1px solid #81bb27;
+}
+.mosaic-gallery .mosaic-gallery-item:nth-child(2),
+.mosaic-gallery .mosaic-gallery-item:nth-child(3) {
+      border-left: 1px solid #81bb27;
+      border-right: 1px solid #81bb27;
+}
+.mosaic-gallery .mosaic-gallery-item:nth-child(4) {
+      border-left: 1px solid #81bb27;
+}
 .mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-img {
       width: 292px;
       height: 198.8px;
       margin: auto;
+}
+.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-img {
+      position: relative;
+      overflow: hidden;
+}
+.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-img {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+}
+.mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-img {
+      -webkit-transform: scale(1.06);
+      transform: scale(1.06);
+}
+.mosaic-gallery-item.mosaic-horizontal .mosaic-gallery-img,
+.mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-img {
+      -webkit-transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.mosaic-gallery-item.mosaic-horizontal:hover .mosaic-gallery-hover {
+
 }
