@@ -1,4 +1,6 @@
 $(document).ready(function(){
+      /*
+      */
       $('.mosaic-bg-img-holder .mosaic-gallery-img').addClass('fade-In');
       $('.mosaic-bg-img-holder .mosaic-gallery-img').each(function () {
             var imgSrc = $(this).children('img').attr('src');
