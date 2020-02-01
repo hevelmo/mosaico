@@ -7,8 +7,8 @@ $(document).ready(function(){
             var styles = {
                   'background': 'url("' + imgSrc + '")',
                   'background-color': '#F9FBFF',
-                  'background-position': '50% 50%',
-                  'background-size': '90% 90%',
+                  'background-position': 'center center',
+                  'background-size': '73%',
                   'background-repeat': 'no-repeat'
             };
             $(this).css(styles);
